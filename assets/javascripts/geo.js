@@ -24,19 +24,19 @@ var Geo = {
     this.get(function(geo){
       var container = $(containerSelector);
       var ul = $('<ul></ul>');
-      ul.append(Geo.createPrintElement("Speed", geo.speed));
-      ul.append(Geo.createPrintElement("Heading", geo.heading));
-      ul.append(Geo.createPrintElement("Altitude Accuracy", geo.altitudeAccuracy));
-      ul.append(Geo.createPrintElement("Accuracy", geo.accuracy));
-      ul.append(Geo.createPrintElement("Altitude", geo.altitude));
-      ul.append(Geo.createPrintElement("Longitude", geo.longitude));
-      ul.append(Geo.createPrintElement("Latitude", geo.latitude));
+      ul.append(Geo._createPrintElement("Speed", geo.speed));
+      ul.append(Geo._createPrintElement("Heading", geo.heading));
+      ul.append(Geo._createPrintElement("Altitude Accuracy", geo.altitudeAccuracy));
+      ul.append(Geo._createPrintElement("Accuracy", geo.accuracy));
+      ul.append(Geo._createPrintElement("Altitude", geo.altitude));
+      ul.append(Geo._createPrintElement("Longitude", geo.longitude));
+      ul.append(Geo._createPrintElement("Latitude", geo.latitude));
       container.append(ul);
 
       return container;
     });
   },
-  createPrintElement: function (key, value) {
+  _createPrintElement: function (key, value) {
     return $("<li>" + key + ": " + value + "</li>");
   }
 };
