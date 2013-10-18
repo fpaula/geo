@@ -4,8 +4,10 @@ Geo
 Geo location abstraction
 
 ```javascript
-Geo.get(); // => JSON
-Geo.print('#container'); // => prints the result
+Geo.get(function(position) {
+  console.log(position);
+});
+
 ```
 
 Dependencies
